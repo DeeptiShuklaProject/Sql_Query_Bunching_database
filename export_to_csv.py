@@ -1,3 +1,4 @@
+
 import psycopg2
 
 # Database connection parameters
@@ -10,12 +11,7 @@ conn_params = {
 }
 
 # SQL queries to export to CSV
-queries = {
-    'Employee': "COPY (SELECT * FROM Employee) TO STDOUT WITH CSV HEADER",
-    'Department': "COPY (SELECT * FROM Department) TO STDOUT WITH CSV HEADER",
-    'Project': "COPY (SELECT * FROM Project) TO STDOUT WITH CSV HEADER"
-}
-
+queries = {'Employee': "COPY (SELECT * FROM Employee) TO STDOUT WITH CSV HEADER",'Department': "COPY (SELECT * FROM Department) TO STDOUT WITH CSV HEADER",'Project': "COPY (SELECT * FROM Project) TO STDOUT WITH CSV HEADER"}
 # File paths for CSV output
 file_paths = {
     'Employee': r'D:\RDBMS\Sql_Query_Bunching_database\data\Employee.csv',
